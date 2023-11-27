@@ -12,6 +12,7 @@ logging.basicConfig(level=logging.INFO)
 # constants for file paths and binary to be analyzed
 BINARY_PATH = "/path/to/binary"
 DATA_FILE = "path/to/file.json"
+riskyFunctions = ['strcpy', 'strncpy', 'memcpy', 'memset', 'send', 'recv']
 
 # GDB command to list all functions in binary
 # returns output from GDB as string
@@ -60,7 +61,7 @@ def main_search_code():
 # filters out functions deemed "safe" and writes the rest to new json file
 def remove_safe_functions():
 	json_data = read_json_file(DATA_FILE)
-	filtered_json_data = [func for func in json_data if "safe" not in func["name"]]
+	filtered_json_data = [func for func in json_data if func['name'] not in riskyFunctions]
 	write_json_file("filtered_file.json", filtered_json_data)
 
 # combines multiple entries of the same function into a single record
