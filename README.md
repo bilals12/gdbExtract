@@ -1,7 +1,7 @@
 # gdbExtract
 
 ## overview
-this is a python script designed to automate process of extracting function information from binary files using the GNU debugger (GDB). in case u don't want to use IDA or any other GUI that feels cumbersome, this tool will come in handy. it's particularly useful for reverse engineering, vulnerability assessment, and other analysis. there's a full write up on my blog, here.
+this is a python script designed to automate process of extracting function information from binary files using the GNU debugger (GDB). in case u don't want to use IDA or any other GUI that feels cumbersome, this tool will come in handy. it's particularly useful for reverse engineering, vulnerability assessment, and other analysis. there's a full write up on my blog, [here](https://www.bsssq.xyz/posts/2023/11/gdbextract/).
 
 ## features
 - automated extraction: quickly extracts function data from binaries using GDB
